@@ -12,7 +12,7 @@ function Hi() {
 
   const submitHandler = (e) => {
    e.preventDefault();
-   console.log("cityName :" , +cityName)
+   console.log("cityName :" , cityName)
 
     axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=62beca7abecd9df6160deafa94100d92&units=metric`)
     .then(function (response) {
@@ -45,7 +45,7 @@ const getWeather = () => {
 getWeather();
 }, [])
 
-return <div>
+return <div className='all'>
   
   {/* <div>State variable</div>
     {data}
@@ -70,15 +70,15 @@ return <div>
     <hr /> */}
   
   <form onSubmit={submitHandler}>
-<div class="name"><div> <h1>Weather App</h1></div>
+<div className='name'><div className='heading'> <h1>Weather App</h1></div>
 
-  <div> <label>Enter city name</label>
+  <div>
   <input type="text" 
-  placeholder='Enter City'
+  placeholder='Enter City Name'
   onChange={(e) => {
     setCityName(e.target.value)
   }}
-  /> 
+  /> <br /> <br /> 
  <button type='submit'>GetWeather</button></div></div>
 </form>
 
@@ -86,10 +86,12 @@ return <div>
 
 {(weather?.name)?
 <div id='result'>
-  <div>weather of :{weather?.name}</div>
-  <div>weather tempreature :{weather?.main?.temp}</div>
-  <div>weather pressure :{weather?.main?.pressure}</div>
-  <div>Country :{weather?.sys?.country}</div>
+  <div><h1>Country :{weather?.sys?.country}</h1></div><hr />
+  <div><h2>City Of :{weather?.name}</h2></div><hr />
+  <div> Weather Tempreature :{weather?.main?.temp}°C</div><hr />
+  <div>Weather Pressure :{weather?.main?.pressure}</div><hr />
+  <div><h5>Min_Temp :{weather?.main?.temp_max}°C <hr />
+     Max_Temp {weather?.main?.temp_min}°C</h5></div>
   
 </div>
 :

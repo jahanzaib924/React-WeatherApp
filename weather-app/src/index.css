@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.all{
+  position: relative;
+  left: 25%;
+  background-color: lightgray;
+  /* width: 50%;
+  position: relative;
+  left: 30%; */
+  height: 500px;
+  width: 50%;
+  border-radius: 50px;
+  text-align: center;
+}
+.name input{
+  border: 0px;
+  border-radius: 70px;
+  height: 30px;
+  text-align: center;
+}
+.name input:hover{
+  border: 0px;
+  border-radius: 70px;
+  height: 50px;
+  text-align: center;
+  font-size: large;
+}
+.name button {
+  background-color: purple;
+  color: white;
+  border: 0px;
+  border-radius: 70px;
+  height: 30px;
+}
+.name button:hover{
+  background-color: purple;
+  color: white;
+  border: 0px;
+  border-radius: 70px;
+  height: 50px;
+  font-size: large;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.heading{
+  background-color: purple;
+  color: white; 
+  border-radius: 0px;
+  border-top: 20px ;
+}
+#result{
+  background-color: white;
+  text-align: center;
+  width: 100%;
+}
